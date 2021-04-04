@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 2021_04_03_202020) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
-    t.string "name", default: "", null: false
-    t.string "second_name", default: "", null: false
-    t.string "sur_name", default: "", null: false
-    t.string "sex", default: "", null: false
-    t.string "tel", default: "", null: false
-    t.string "telegram", default: ""
-    t.string "rate", default: "", null: false
-    t.string "ip", default: "", null: false
-    t.datetime "date_of_birth", null: false
+    t.string "name"
+    t.string "second_name"
+    t.string "sur_name"
+    t.string "sex"
+    t.string "tel"
+    t.string "telegram"
+    t.string "rate"
+    t.string "ip"
+    t.datetime "date_of_birth"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -38,15 +38,15 @@ ActiveRecord::Schema.define(version: 2021_04_03_202020) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email", default: "", null: false
-    t.string "name", default: "", null: false
-    t.string "second_name", default: "", null: false
-    t.string "sur_name", default: "", null: false
-    t.string "sex", default: "", null: false
-    t.string "tel", default: "", null: false
-    t.string "telegram", default: ""
-    t.string "rate", default: "", null: false
-    t.string "ip", default: "", null: false
-    t.datetime "date_of_birth", null: false
+    t.string "name"
+    t.string "second_name"
+    t.string "sur_name"
+    t.string "sex"
+    t.string "tel"
+    t.string "telegram"
+    t.string "rate"
+    t.string "ip"
+    t.datetime "date_of_birth"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -59,15 +59,15 @@ ActiveRecord::Schema.define(version: 2021_04_03_202020) do
 
   create_table "moderators", force: :cascade do |t|
     t.string "email", default: "", null: false
-    t.string "name", default: "", null: false
-    t.string "second_name", default: "", null: false
-    t.string "sur_name", default: "", null: false
-    t.string "sex", default: "", null: false
-    t.string "tel", default: "", null: false
-    t.string "telegram", default: ""
-    t.string "rate", default: "", null: false
-    t.string "ip", default: "", null: false
-    t.datetime "date_of_birth", null: false
+    t.string "name"
+    t.string "second_name"
+    t.string "sur_name"
+    t.string "sex"
+    t.string "tel"
+    t.string "telegram"
+    t.string "rate"
+    t.string "ip"
+    t.datetime "date_of_birth"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
