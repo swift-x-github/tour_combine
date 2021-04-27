@@ -34,7 +34,7 @@ class EmployeesController < ApplicationController
   # PUT departments/1/employees/1
   def update
     if @employee.update_attributes(employee_params)
-      redirect_to([@employee.department, @employee], notice: 'Employee was successfully updated.')
+      redirect_to department_employees_url(@department)
     else
       render action: 'edit'
     end
@@ -54,6 +54,7 @@ class EmployeesController < ApplicationController
     end
 
     def set_employee
+      #@employee = @department.employees.find(params[:id])
       @employee = @department.employees.find(params[:id])
     end
 
