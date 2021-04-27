@@ -9,9 +9,13 @@ class Department < ApplicationRecord
   def active_employees
     @active_employees ||= employees.active.count
   end
-
+  
   def total_employees
     @total_employees ||= employees.count
+  end
+
+  def not_active_employees
+    @not_active_employees ||= (total_employees - employees.active.count)
   end
 
   def status

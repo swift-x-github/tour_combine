@@ -1,10 +1,25 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'Преглянути список всіх працівників департаменту', department_employees_path(@department) %>
+<%= link_to 'Преглянути список всіх працівників департаменту', department_employees_path(@department), class: 'btn btn-primary' %>
 <p>
   <strong>Name:</strong>
   <%= @department.name %>
 </p>
 
+<p>
+  <strong>Всьго працівників:</strong>
+  <%= @department.total_employees %> ( <%= @department.active_employees %> активних )
+</p>
 
-<%= link_to 'Редагувати інформацію про департамент', edit_department_path(@department) %> |
-<%= link_to 'Список департаментів', departments_path %>
+<p>
+  <strong>Name:</strong>
+  <%= @department.name %>
+</p>
+<p>
+  <strong> Процент активних працівників:</strong>
+  <%= @department.percent_complete %>
+</p>
+
+
+
+<%= link_to 'Редагувати інформацію про департамент', edit_department_path(@department), class: 'btn btn-primary' %> |
+<%= link_to 'Список департаментів', departments_path, class: 'btn btn-primary' %>
