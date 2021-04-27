@@ -1,15 +1,16 @@
-<h2>Sign up</h2>
+<h2>Реєстрація користувача</h2>
+<main class="form-signin">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "електронна скринька" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "пароль" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,62 +18,63 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "ще раз введіть пароль" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "ім'я" %><br />
     <%= f.text_field :name%>
   </div>
 
 
   <div class="field">
-    <%= f.label :second_name %><br />
+    <%= f.label :second_name, "по батькові" %><br />
     <%= f.text_field :second_name%>
   </div>
 
 
   <div class="field">
-    <%= f.label :sur_name %><br />
+    <%= f.label :sur_name, "прізвище" %><br />
     <%= f.text_field :sur_name %>
   </div>
 
  <div class="field">
-    <%= f.label :sex %><br />
+    <%= f.label :sex, "стать" %><br />
     <%= f.select(:sex, [["Чоловік","1"], ["Жінка","2"] ]) %>
   </div>
 
  <div class="field">
-    <%= f.label :tel %><br />
+    <%= f.label :tel, "телефон" %><br />
     <%= f.text_field :tel %>
   </div>
 
  <div class="field">
-    <%= f.label :telegram %><br />
+    <%= f.label :telegram, "телеграм" %><br />
     <%= f.text_field :telegram %>
   </div>
 
  <div class="field">
-    <%= f.label :rate %><br />
+    <%= f.label :rate, "рейтінг" %><br />
     <%= f.text_field :rate %>
   </div>
 
 
  <div class="field">
-    <%= f.label :ip %><br />
+    <%= f.label :ip, "IP адреса" %><br />
     <%= f.text_field :ip %>
   </div>
 
  <div class="field">
-    <%= f.label :date_of_birth %><br />
+    <%= f.label :date_of_birth, "дата народження" %><br />
     <%= f.date_field :date_of_birth %>
   </div>
 
 
   <div class="actions">
-    <%= f.submit "Реєстрація клієнта" %>
+    <%= f.submit "Реєстрація клієнта", class: 'btn btn-lg btn-primary' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</main>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :departments do
+    resources :employees
+  end
   get 'home/index'
   devise_for :administrators
   devise_for :moderators

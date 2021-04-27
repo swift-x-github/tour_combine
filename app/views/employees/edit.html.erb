@@ -1,0 +1,6 @@
+<h1>Editing employee</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [@employee.department, @employee] %> |
+<%= link_to 'Back', department_employees_path(@employee.department) %>
