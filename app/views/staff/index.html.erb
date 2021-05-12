@@ -9,7 +9,7 @@
     <th></th>
     <th></th>
   </tr>
-
+<%= will_paginate @employees %>
 <% @employees.each do |employee| %>
   <tr>
     <td><%= employee.name %></td>

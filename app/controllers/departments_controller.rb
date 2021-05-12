@@ -22,7 +22,6 @@ class DepartmentsController < ApplicationController
   # POST /departments or /departments.json
   def create
     @department = Department.new(department_params)
-
     respond_to do |format|
       if @department.save
         format.html { redirect_to @department, notice: "Department was successfully created." }
