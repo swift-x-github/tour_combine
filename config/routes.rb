@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'staff/index'
+  get 'staff/show'
   resources :departments do
     resources :employees
   end

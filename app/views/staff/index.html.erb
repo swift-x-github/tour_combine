@@ -1,0 +1,28 @@
+<h1>Список всіх працівників    </h1>
+
+<table class="table">
+  <tr>
+    <th>ПІБ</th>
+    <th>Статус</th>
+    <th>Департамент</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.name %></td>
+    <td><%= employee.active %></td>
+    <td><%= employee.department.name %></td>
+    <td><%= link_to 'Show', [employee.department, employee] %></td>
+    <td><%= link_to 'Edit', edit_department_employee_path(employee.department, employee) %></td>
+    <td><%= link_to 'Destroy', [employee.department, employee], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'Перейти до списку всіх департаментів', departments_path, class: 'btn btn-primary' %>
